@@ -10,7 +10,14 @@ const Home = () => {
 
   return (
     <div className="home">
-      {isLoading && <>Loading...</>}
+      {isLoading && (
+        <div className="loadin-outer">
+          <div className="loading-inner">
+            <p>Loading...</p>
+            <span></span>
+          </div>
+        </div>
+      )}
       {isError && (
         <div>
           <p>An error occured...</p>
